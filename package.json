@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "devDependencies": {
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "lefthook": "^1.11.5",
+    "prettier": "^3.5.3"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
