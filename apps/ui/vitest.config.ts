@@ -1,37 +1,13 @@
-import path from "node:path";
-import { fileURLToPath } from "node:url";
 import { defineConfig } from "vitest/config";
-import { storybookTest } from "@storybook/experimental-addon-test/vitest-plugin";
 import react from "@vitejs/plugin-react";
-
-const dirname =
-  typeof __dirname !== "undefined"
-    ? __dirname
-    : path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   plugins: [react()],
   test: {
     globals: true,
     environment: "jsdom",
-    setupFiles: ["./src/test/setup.ts"], // Archivo principal de configuración
-    workspace: [
-      {
-        extends: true,
-        plugins: [
-          storybookTest({ configDir: path.join(dirname, ".storybook") }),
-        ],
-        test: {
-          name: "storybook",
-          browser: {
-            enabled: true,
-            headless: true,
-            provider: "playwright",
-            instances: [{ browser: "chromium" }],
-          },
-          setupFiles: [".storybook/vitest.setup.ts"],
-        },
-      },
-    ],
+    setupFiles: ["./.storybook/vitest.setup.ts"], // si usas mocks u otras configuraciones globales
+    include: ["src/__test__/**/*.test.ts?(x)"],
+    exclude: ["**/*.stories.tsx", "**/node_modules/**"],
   },
 });

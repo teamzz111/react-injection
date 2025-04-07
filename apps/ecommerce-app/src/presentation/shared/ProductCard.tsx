@@ -9,7 +9,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@mono-repo/ui";
+} from "ui-test-fruit";
 import { ImageIcon, ShoppingCartIcon } from "lucide-react";
 
 const ProductCard = memo(

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@mono-repo/ui";
+import { Button } from "ui-test-fruit";
 import {
   Trash2,
   Plus,
