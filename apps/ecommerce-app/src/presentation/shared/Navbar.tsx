@@ -135,17 +135,6 @@ export const Navbar: React.FC = () => {
                 </span>
               </Link>
             )}
-
-            <Link
-              to="/about"
-              className={`transition-colors ${
-                isActive("/about")
-                  ? "text-blue-600 font-medium"
-                  : "text-gray-600 hover:text-blue-600"
-              }`}
-            >
-              Acerca de
-            </Link>
           </nav>
 
           <div className="flex items-center space-x-4">
@@ -339,17 +328,6 @@ export const Navbar: React.FC = () => {
                   </button>
                 </>
               )}
-
-              <button
-                onClick={() => handleNavigation("/about")}
-                className={`w-full text-left py-2 px-3 rounded-md ${
-                  isActive("/about")
-                    ? "bg-blue-50 text-blue-600 font-medium"
-                    : "text-gray-700 hover:bg-gray-50"
-                }`}
-              >
-                Acerca de
-              </button>
             </div>
           </div>
         </div>
