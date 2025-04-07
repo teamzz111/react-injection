@@ -1,4 +1,4 @@
-name: Run Vitest
+name: Test UI Package
 
 on:
   push:
@@ -7,9 +7,13 @@ on:
     branches: [main]
 
 jobs:
-  test:
-    name: Run unit tests
+  test-ui:
+    name: Run UI tests
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ./ui
 
     steps:
       - name: Checkout code
@@ -20,6 +24,7 @@ jobs:
         with:
           node-version: 20
           cache: yarn
+          cache-dependency-path: ui/yarn.lock
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
