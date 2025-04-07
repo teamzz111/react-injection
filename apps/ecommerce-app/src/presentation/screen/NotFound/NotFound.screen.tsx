@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button } from "@mono-repo/ui";
+import { Button } from "ui-test-fruit";
 
 const NotFound: React.FC = () => {
   return (
