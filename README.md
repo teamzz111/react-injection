@@ -161,7 +161,7 @@ Esta estructura permite:
 ```bash
 # Clonar el repositorio
 git clone https://github.com/company/shopifrutas.git
-cd shopifrutas
+cd shopifrutas/apps/ecommerce-app
 
 # Instalar dependencias
 yarn install
