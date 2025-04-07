@@ -11,5 +11,11 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "stories/Modal.stories.tsx",
+    "stories/Card.stories.tsx",
+    "stories/Badge.stories.tsx",
+    "stories/Button.stories.tsx"
+  ]
 }

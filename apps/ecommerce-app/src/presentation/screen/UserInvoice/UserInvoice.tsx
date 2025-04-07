@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Eye, Calendar, FileText } from "lucide-react";
-import { Modal, Button } from "@mono-repo/ui";
+import { Modal, Button } from "ui-test-fruit";
 import { Link } from "react-router-dom";
 import { useUserInvoicesPresenter } from "../../presenter/UserInvoice.presenter";
 

@@ -1,0 +1,29 @@
+name: Test UI Package
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test-ui:
+    name: Run UI tests
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: /ui
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Run tests
+        run: yarn test
